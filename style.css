@@ -1,0 +1,89 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@300&family=Roboto+Slab:wght@500&family=Rubik&display=swap");
+button, button:focus {
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+.font-raleway {
+  font-family: "Raleway", cursive;
+}
+
+.font-rubik {
+  font-family: "Rubik", cursive;
+}
+
+.font-roboto {
+  font-family: "Roboto", cursive;
+}
+
+.font-size-12 {
+  font-size: 12px;
+}
+
+.font-size-14 {
+  font-size: 14px;
+}
+
+.font-size-16 {
+  font-size: 16px;
+}
+
+.font-size-20 {
+  font-size: 20px;
+}
+
+.font-size-22 {
+  font-size: 22px;
+}
+
+.margin-top {
+  margin-top: 5px;
+}
+
+.color-primary-bg {
+  background: #F3F3F3;
+}
+
+.color-primary {
+  color: #F3F3F3;
+}
+
+.color-primary-bg-2 {
+  background: #FDF8FB;
+}
+
+.color-primary-2 {
+  color: #FDF8FB;
+}
+
+.color-secondary-bg {
+  background: #E8CEBF;
+}
+
+.color-secondary {
+  color: #E8CEBF;
+}
+
+.color-primary-font-bg {
+  background: #4F4846;
+}
+
+.color-primary-font {
+  color: #4F4846;
+}
+
+.color-primary-button {
+  background: #bd8c7d;
+}
+
+#products .owl-carousel .item .product a {
+  overflow: hidden;
+}
+#products .owl-carousel .item .product img {
+  transition: transform 0.5s ease;
+}
+#products .owl-carousel .item .product img:hover {
+  transform: scale(1.1);
+}
+
+/*# sourceMappingURL=style.css.map */
