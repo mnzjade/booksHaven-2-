@@ -6,12 +6,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
       $deletedrecord = $Cart->deleteCart($_POST['item_id']);
   } // code...
 
-  // save for later
-  if (isset($_POST['wishlist-submit'])){
-      $Cart->saveForLater($_POST['item_id']);
-  }
-
-
 
 }
 
@@ -52,10 +46,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                 <button type="submit" name="delete-cart-submit" class="btn font-rubik text-danger px-3 border-right">Delete</button>
               </form>
 
-              <form method="post">
-                  <input type="hidden" value="<?php echo $item['item_id'] ?? 0; ?>" name="item_id">
-                  <button type="submit" name="wishlist-submit" class="btn font-raleway text-danger">Save for Later</button>
-              </form>
+
             </div>
             <!-- !product qty -->
 
@@ -63,7 +54,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
           <div class="col-sm-2 text-right">
             <div class="font-size-20 text-danger font-rubik">
-            <span class="product_price">&#8369;<?php echo $item['item_price'] ?></span>
+            &#8369;<span class="product_price" data-id="<?php  echo $item['item_id'] ?? '0'?>"><?php echo $item['item_price'] ?></span>
             </div>
           </div>
         </div>

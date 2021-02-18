@@ -3,18 +3,18 @@
 class DBController
  {
   // DATABASE CONNECTION PROPERTIES - original
-  // protected $host = 'localhost';
-  // protected $user = 'root';
-  // protected $password = '';
-  // protected $database = 'bookshaven';
+  protected $host = 'localhost';
+  protected $user = 'root';
+  protected $password = '';
+  protected $database = 'bookshaven';
 
 
 
   // DATABASE CONNECTION PROPERTIES - REMOTE DATABASE CONNECTION
-  protected $host = 'sql12.freemysqlhosting.net';
-  protected $user = 'sql12392441';
-  protected $password = 'PyisC5Xz1i';
-  protected $database = 'sql12392441';
+  // protected $host = 'sql12.freemysqlhosting.net';
+  // protected $user = 'sql12392441';
+  // protected $password = 'PyisC5Xz1i';
+  // protected $database = 'sql12392441';
 
 
 

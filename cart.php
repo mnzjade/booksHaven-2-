@@ -6,15 +6,20 @@ ob_start();
 ?>
 
 <?php
-//include _cart.php file
-include ('Template/_cart.php');
 
-//include _wishlist.php file
-include ('Template/_wishlist.php');
+
+//include _cart.php file if it is not empty
+
+
+
+//include _cart.php file if it is not empty
+count($product->getData(table:'cart')) ? include ('Template/_cart.php'): include ('Template/notFound/_cart_notFound.php');
+
 
 
 
  ?>
+
 
 
 
