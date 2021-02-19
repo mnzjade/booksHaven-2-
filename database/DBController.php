@@ -11,10 +11,10 @@ class DBController
 
 
   // DATABASE CONNECTION PROPERTIES - REMOTE DATABASE CONNECTION
-  protected $host = 'sql12.freemysqlhosting.net';
-  protected $user = 'sql12392441';
-  protected $password = 'PyisC5Xz1i';
-  protected $database = 'sql12392441';
+  protected $host = 'remotemysql.com';
+  protected $user = 'MJhhpLhYIU';
+  protected $password = 'qVSxNHQQvx';
+  protected $database = 'MJhhpLhYIU';
 
 
 
