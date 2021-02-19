@@ -48,7 +48,7 @@
     <!-- PRIMARY NAVIGATION - BOOTSTRAP -->
     <nav class="navbar navbar-expand-lg navbar-dark color-primary-button">
       <div class="container-fluid">
-        <a class="navbar-brand font-raleway font-size-22" href="#">BooksHaven PH</a>
+        <a class="navbar-brand font-raleway font-size-22" href="index.php">BooksHaven PH</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
