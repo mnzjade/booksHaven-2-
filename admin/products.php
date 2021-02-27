@@ -56,32 +56,33 @@
                          </td>
         							</tr>
                     <?php } ?><?php }
-      //              ?><?php
-      //              $conn = mysqli_connect("remotemysql.com", "MJhhpLhYIU", "p5TCebHmJF");
-      //              $db = mysqli_select_db($conn, 'MJhhpLhYIU');
-      //
-      //              if (isset($_POST['delete_btn']))
-      //              {
-      //                $item_id = $_POST['item_id'];
-      //
-      //                $query = "DELETE FROM product WHERE item_id=$item_id ";
-      //                $query_run = mysqli_query($conn, $query);
-      //
-      //                if (! $query_run)
-      //                {
-      //                  die('Could not delete data: ' . mysql_error());
-      //                }
-      //                else {
-      //                  echo '<script> alert ("Data Deleted") </script>';
-      //                  $mysqli -> close();
-      //                }
-      //
-      //
-      //              } else {
-      //               echo '<script> alert ("Data Not Deleted") </script>' ?>
-      //       <?php
-      //    }
-      // ?>
+                   ?><?php
+                   $conn = mysqli_connect("remotemysql.com", "MJhhpLhYIU", "p5TCebHmJF");
+                   $db = mysqli_select_db($conn, 'MJhhpLhYIU');
+
+                   if (isset($_POST['delete_btn']))
+                   {
+                     $item_id = $_POST['item_id'];
+
+                     $query = "DELETE FROM product WHERE item_id=$item_id ";
+                     $query_run = mysqli_query($conn, $query);
+
+                     if (! $query_run)
+                     {
+                       die('Could not delete data: ' . mysql_error());
+                     }
+                     else {
+                       echo '<script> alert ("Data Deleted") </script>';
+                       echo '<script>window.location="products.php"</script>';
+                       $mysqli -> close();
+                     }
+
+
+                   } else {
+                    echo '<script> alert ("Data Not Deleted") </script>' ?>
+            <?php
+         }
+      ?>
 
     						 </thead>
     						 <tbody>

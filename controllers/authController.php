@@ -6,7 +6,6 @@ session_start();
 
 require 'database/db.php';
 
-
 $errors = array();
 $username = "";
 $email = "";
@@ -71,9 +70,9 @@ if (count($errors) === 0)
   $token = bin2hex(random_bytes(50));
   $verified = false;
 
-  $sql = "INSERT INTO users (username, email, verified, token, password, role) VALUES (?, ?, ?, ?, ?, ?)";
+  $sql = "INSERT INTO users (username, email, password, role) VALUES (?, ?, ?, ?)";
   $stmt = $conn->prepare($sql);
-  $stmt->bind_param('ssbsss', $username, $email, $verified, $token, $password, $role);
+  $stmt->bind_param('ssss', $username, $email, $password, $role);
 
 
 
@@ -84,7 +83,7 @@ if (count($errors) === 0)
     $_SESSION['id'] = $user_id;
     $_SESSION['username'] = $username;
     $_SESSION['email'] = $email;
-    $_SESSION['verified'] = $verified;
+    // $_SESSION['verified'] = $verified;
     $_SESSION['role'] = $role;
 
 
@@ -137,7 +136,7 @@ if (isset($_POST['login-btn']))
       $_SESSION['id'] = $user['id'];
       $_SESSION['username'] = $user['username'];
       $_SESSION['email'] = $user['email'];
-      $_SESSION['verified'] = $user['verified'];
+      // $_SESSION['verified'] = $user['verified'];
 
       if ($user['role'] == 'admin')
       {
@@ -176,11 +175,12 @@ if (isset($_GET['logout']))
   unset($_SESSION['id']);
   unset($_SESSION['username']);
   unset($_SESSION['email']);
-  unset($_SESSION['verified']);
+  // unset($_SESSION['verified']);
   unset($_SESSION['role']);
   header('location: index.php');
   exit();
 }
+
 
 
  ?>

@@ -77,13 +77,16 @@ require('index.php');
                     }
                     else {
                       echo '<script> alert ("Data Deleted") </script>';
+                      echo '<script>window.location="users.php"</script>';
                     }
 
 
-                  } else {
-                   echo '<script> alert ("Data Not Deleted") </script>' ?>
-           <?php
-        } ?>
+                  }
+
+        //           else {
+        //            echo '<script> alert ("Data Not Deleted") </script>' ?>
+        //    <?php
+        // } ?>
 
 
 
