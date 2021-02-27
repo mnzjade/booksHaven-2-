@@ -22,11 +22,11 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
       <?php foreach ($product_shuffle as $item) {?>
         <div class="item py-2">
         <div class="product font-raleway">
-          <a href="#"><img src="<?php echo $item['item_image'] ?>"style="height: 300px;" alt="product1" class="img-fluid"></a>
+          <a href="#"><img src="<?php echo $item['item_image'] ?>"style="height, width: 300px" alt="product1" class="img-fluid"></a>
           <div class="text-center">
-            <h2><?php echo $item['item_name'] ?></h2>
-            <span><?php echo $item['item_description']?></span>
-            <div class="price py-2">
+            <h2 class="font-size-20 font-rubik"><?php echo $item['item_name'] ?></h2>
+            <span class="font-size-14 font-rubik"><?php echo $item['item_description']?></span>
+            <div class="price py-2 font-rubik">
               <span>&#8369;<?php echo $item['item_price'] ?></span>
             </div>
             <form method="post">
