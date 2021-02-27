@@ -13,7 +13,7 @@ class DBController
   // DATABASE CONNECTION PROPERTIES - REMOTE DATABASE CONNECTION
   protected $host = 'remotemysql.com';
   protected $user = 'MJhhpLhYIU';
-  protected $password = 'qVSxNHQQvx';
+  protected $password = 'p5TCebHmJF';
   protected $database = 'MJhhpLhYIU';
 
 
