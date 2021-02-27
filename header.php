@@ -1,3 +1,26 @@
+<?php
+require_once 'controllers/authController.php';
+
+// if (!isset($_SESSION['id']))
+// {
+//   header('location: index.php');
+//   exit();
+// }
+
+// if (isset($_SESSION['role'])) {
+//
+// }
+// else {
+//     echo "<script>alert('you need to login first');
+//     window.location.href='../index';</script>";
+// }
+
+
+
+
+ ?>
+
+
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
 
@@ -34,15 +57,34 @@
 
 <body>
 
+
   <!-- START HEADER -->
   <header id="header">
     <div class="strip d-flex justify-content-between px-4 py-1 bg-light">
       <p class="font-raleway font-size-12 text-black-50 m-0">Anonas, Sta. Mesa, Maynila, Kalakhang Maynila</p>
 
       <div class="font-raleway font-size-14">
-        <a href="#" class="px-3 border-right border-left text-dark">Login</a>
+        <a href="login.php" class="px-3 border-right border-left text-dark">Login</a>
+        <a href="index.php?logout=1" class="logout border-right border-left text-dark">Logout</a>
       </div>
     </div>
+
+
+    <!-- displaying login details   -->
+    <?php if (isset($_SESSION['message'])): ?>
+    <div class="strip d-flex justify-content-between px-4 py-1 bg-light <?php echo $_SESSION['alert-class']; ?>">
+
+      <p class="font-raleway font-size-14 text-black-50 m-0"><?php echo $_SESSION['message'];
+      unset($_SESSION['message']);
+      unset($_SESSION['alert-class']);
+      ?></p>
+      <p class="font-raleway font-size-14 text-dark m-0">Welcome, <?php echo $_SESSION['username']; ?> </p>
+
+    </div>
+    <?php endif; ?>
+    <!-- displaying login details   -->
+
+
 
 
     <!-- PRIMARY NAVIGATION - BOOTSTRAP -->

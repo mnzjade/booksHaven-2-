@@ -1,5 +1,9 @@
+
   <!-- Shopping cart section  -->
 <?php
+
+require_once 'controllers/authController.php';
+
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
   if (isset($_POST['delete-cart-submit'])){
@@ -10,6 +14,22 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 }
 
  ?>
+
+
+ <!-- displaying login details   -->
+ <?php if (isset($_SESSION['message'])): ?>
+ <div class="strip d-flex justify-content-between px-4 py-1 bg-light <?php echo $_SESSION['alert-class']; ?>">
+
+   <p class="font-raleway font-size-14 text-black-50 m-0"><?php echo $_SESSION['message'];
+   unset($_SESSION['message']);
+   unset($_SESSION['alert-class']);
+   ?></p>
+   <p class="font-raleway font-size-14 text-dark m-0">Welcome, <?php echo $_SESSION['username']; ?> </p>
+
+ </div>
+ <?php endif; ?>
+ <!-- displaying login details   -->
+
 
 <section id="cart" class="py-3">
   <div class="container-fluid w-75">
