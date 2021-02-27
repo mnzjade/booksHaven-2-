@@ -2,8 +2,8 @@
 require('index.php');
 
 
-$conn = mysqli_connect("remotemysql.com", "MJhhpLhYIU", "p5TCebHmJF");
-$db = mysqli_select_db($conn, 'MJhhpLhYIU');
+$conn = mysqli_connect("remotemysql.com", "5JeIdD8vHK", "T2fAEbgdLm");
+$db = mysqli_select_db($conn, '5JeIdD8vHK');
 
 if (isset($_POST['submit'])){
 
