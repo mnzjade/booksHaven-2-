@@ -61,8 +61,8 @@ require('index.php');
                   <?php } ?>
 
                   <?php
-                  $conn = mysqli_connect("localhost", "root", "");
-                  $db = mysqli_select_db($conn, 'bookshaven');
+                  $conn = mysqli_connect("remotemysql.com", "MJhhpLhYIU", "p5TCebHmJF");
+                  $db = mysqli_select_db($conn, 'MJhhpLhYIU');
 
                   if (isset($_POST['delete_btn']))
                   {
