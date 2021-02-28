@@ -4,11 +4,11 @@
 
 require_once 'controllers/authController.php';
 
-
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
   if (isset($_POST['delete-cart-submit'])){
       $deletedrecord = $Cart->deleteCart($_POST['item_id']);
   } // code...
+
 
 
 }
@@ -92,7 +92,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
           <h6 class="font-size-12 font-raleway text-success py-3"><i class="fas fa-check"></i> Your order is eligible for FREE Delivery.</h6>
           <div class="border-top py-4">
             <h5 class="font-rubik font-size-20">Subtotal (<?php echo isset($subTotal) ? count($subTotal) : 0; ?> item):&nbsp; <span class="text-danger">&#8369;<span class="text-danger" id="deal-price"><?php echo isset($subTotal) ? $Cart->getSum($subTotal) : 0; ?></span> </span> </h5>
-            <button type="submit" class="btn btn-warning mt-3">Proceed to Buy</button>
+            <a href="checkout.php"><button type="submit" name="proceed-to-buy" class="btn btn-warning mt-3">Proceed to Buy</button></a>
           </div>
         </div>
       </div>
